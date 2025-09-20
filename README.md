@@ -1,4 +1,4 @@
-# MASM on Linux — README
+# MASM on Linux
 
 This repository contains 8086 MS-DOS assemblers/linkers (MASM/TASM and LINK) and tools you can run under Linux using **DOSBox**.
 Files in `8086/` (already included):
@@ -12,7 +12,7 @@ Below are simple step-by-step instructions to install DOSBox on common Linux dis
 
 ---
 
-# 1 — Install DOSBox
+# 1 Install DOSBox
 
 Choose the command for your distribution.
 
@@ -57,7 +57,7 @@ sudo snap install dosbox --classic
 
 ---
 
-# 2 — Prepare your project folder
+# 2 Prepare your project folder
 
 Put your `.ASM` files alongside the `8086` folder or inside a subfolder. Example layout:
 
@@ -81,7 +81,7 @@ chmod +x 8086/*.EXE
 
 ---
 
-# 3 — Run DOSBox and mount the folder
+# 3 Run DOSBox and mount the folder
 
 You can launch an interactive DOSBox session and mount your project directory as drive `C:`:
 
@@ -109,7 +109,7 @@ Replace `/full/path/to/your-project` with the absolute path (e.g. `/home/ruvais/
 
 ---
 
-# 4 — Assemble & link with MASM (example)
+# 4 Assemble & link with MASM (example)
 
 Here’s a simple workflow using **MASM** + **LINK** for a source file `hello.asm`.
 
@@ -158,7 +158,7 @@ dosbox -c "mount c /full/path/to/your-project" \
 
 ---
 
-# 5 — Using TASM / TD (Turbo Assembler / Debugger)
+# 5 Using TASM / TD (Turbo Assembler / Debugger)
 
 To assemble with TASM:
 
@@ -178,7 +178,7 @@ C:\> 8086\TD.EXE hello.exe
 
 ---
 
-# 6 — Tips and recommended DOSBox settings
+# 6 Tips and recommended DOSBox settings
 
 If assembly or linking is slow, increase CPU cycles and memory in DOSBox:
 
@@ -193,7 +193,7 @@ Or edit/create `dosbox.conf` and add under `[cpu]` / `[dosbox]` sections (intera
 
 ---
 
-# 7 — Automating builds (optional)
+# 7 Automating builds (optional)
 
 Create a small shell script to run MASM build under DOSBox:
 
@@ -218,7 +218,7 @@ chmod +x build.sh
 
 ---
 
-# 8 — Troubleshooting
+# 8 Troubleshooting
 
 * **"Bad command or file name"**: Make sure you mounted the correct folder and switched to the `C:` drive.
 * **Permissions issues**: DOS executables are run by DOSBox; Linux file permissions rarely block them, but ensure the files exist and paths are correct.
@@ -228,13 +228,13 @@ chmod +x build.sh
 
 ---
 
-# 9 — Safety & licensing
+# 9 Safety & licensing
 
 These executables may be proprietary (MASM, TASM, LINK, TD). Ensure you have the legal right to use/distribute them. This README assumes you already own or are permitted to use these tools for development/testing. I am not providing the binaries — only usage instructions.
 
 ---
 
-# 10 — Example quick checklist
+# 10 Example quick checklist
 
 1. Install `dosbox`.
 2. Place `8086/` and your `.asm` in a project folder.
