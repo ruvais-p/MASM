@@ -1,0 +1,7 @@
+do
+        tempfile="/tmp/hi_$i.txt"
+        echo "Saalikkakka.exe" > "$tempfile"
+        gedit --new-window "$tempfile" &
+        sleep 1
+done
+
